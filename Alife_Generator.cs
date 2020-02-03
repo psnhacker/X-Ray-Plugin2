@@ -130,6 +130,7 @@ public class Alife_Generator : MonoBehaviour
         StalkerXR[] items = new StalkerXR[parse_data.Count];
         for (int i = 0; i < parse_data.Count; i++)
         {
+            
             string[] curentItems = parse_data[i].Split(':');
             items[i] = new StalkerXR
             {
@@ -142,11 +143,11 @@ public class Alife_Generator : MonoBehaviour
                 _rotX = float.Parse(curentItems[6], CultureInfo.InvariantCulture),
                 _rotY = float.Parse(curentItems[7], CultureInfo.InvariantCulture),
                 _rotZ = float.Parse(curentItems[8], CultureInfo.InvariantCulture),
-                _distance = float.Parse(curentItems[8], CultureInfo.InvariantCulture),
-                _money = float.Parse(curentItems[9], CultureInfo.InvariantCulture),
-                _health = float.Parse(curentItems[10], CultureInfo.InvariantCulture),
-                _character_profile = curentItems[11],
-                _items = curentItems[12]
+                //items[i]._distance = float.Parse(curentItems[9], CultureInfo.InvariantCulture);
+                _money = float.Parse(curentItems[10], CultureInfo.InvariantCulture),
+                _health = float.Parse(curentItems[11], CultureInfo.InvariantCulture),
+                _character_profile = curentItems[12],
+                _items = curentItems[13]
             };
         }
         GameObject _parent = new GameObject("LevelStalker");
